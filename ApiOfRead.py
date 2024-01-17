@@ -70,6 +70,7 @@ def getmstoken(ms_token,appnum):
         print(r'账号/应用 '+str(appnum)+' 的微软密钥获取成功')
     else:
         print(r'账号/应用 '+str(appnum)+' 的微软密钥获取失败'+'\n'+'请检查secret里 CLIENT_ID , CLIENT_SECRET , MS_TOKEN 格式与内容是否正确，然后重新设置')
+        print(data,jsontxt)
     refresh_token = jsontxt['refresh_token']
     access_token = jsontxt['access_token']
     return access_token
